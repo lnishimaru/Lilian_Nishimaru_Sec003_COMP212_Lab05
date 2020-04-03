@@ -1,0 +1,44 @@
+﻿<Window x:Class="Lilian_Nishimaru_Sec003_COMP212_Lab05.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lilian_Nishimaru_Sec003_COMP212_Lab05"
+        mc:Ignorable="d"
+        Title="Asynchronous Programming" Height="324.4" Width="800" ShowInTaskbar="False">
+    <Grid>
+        <GroupBox Header="(1) Calculate Asynchronously" HorizontalAlignment="Left" Height="118" Margin="10,10,0,0" VerticalAlignment="Top" Width="248" IsEnabled="False"/>
+        <GroupBox Header="(2) Check for Even/Odd" HorizontalAlignment="Left" Height="119" Margin="10,133,0,0" VerticalAlignment="Top" Width="248">
+            <Label x:Name="evenOddLabel" Content="" HorizontalAlignment="Left" Height="24" Margin="143,70,-2,0" VerticalAlignment="Top" Width="95" FontWeight="Bold"/>
+        </GroupBox>
+        <Label Content="Input Number" HorizontalAlignment="Left" Margin="32,170,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="numberTextBox" HorizontalAlignment="Left" Height="23" Margin="124,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="evenOddButton" Content="Check for Even or Odd" HorizontalAlignment="Left" Margin="19,220,0,0" VerticalAlignment="Top" Width="132" Click="evenOddButton_Click"/>
+        <GroupBox Header="(3) Display List of Values and Search" HorizontalAlignment="Left" Height="242" Margin="276,10,0,0" VerticalAlignment="Top" Width="498">
+            <Grid HorizontalAlignment="Left" Height="208" Margin="10,10,0,0" VerticalAlignment="Top" Width="454">
+                <RadioButton x:Name="doubleRadioButton" Content="Doubles" HorizontalAlignment="Left" Margin="102,10,0,0" VerticalAlignment="Top" GroupName="valueType"/>
+                <RadioButton x:Name="integerRadioButton" Content="Integer" HorizontalAlignment="Left" Margin="19,10,0,0" VerticalAlignment="Top" GroupName="valueType" IsChecked="True"/>
+                <RadioButton x:Name="charRadioButton" Content="Char" HorizontalAlignment="Left" Margin="187,10,0,0" VerticalAlignment="Top" GroupName="valueType"/>
+                <ListBox x:Name="valuesListBox" HorizontalAlignment="Left" Height="160" Margin="10,35,0,0" VerticalAlignment="Top" Width="75"/>
+                <Button x:Name="generateButton" Content="Generate Values" HorizontalAlignment="Left" Margin="324,11,0,0" VerticalAlignment="Top" Width="115" Click="generateButton_Click"/>
+                <Label Content="Input Value for Search" HorizontalAlignment="Left" Margin="86,55,0,0" VerticalAlignment="Top"/>
+                <Label Content="Input Low Index" HorizontalAlignment="Left" Margin="118,83,0,0" VerticalAlignment="Top"/>
+                <Label Content="Input High Index" HorizontalAlignment="Left" Margin="115,112,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="searchTextBox" HorizontalAlignment="Left" Height="23" Margin="239,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                <Button x:Name="searchButton" Content="Search" HorizontalAlignment="Left" Margin="364,59,0,0" VerticalAlignment="Top" Width="75" Click="searchButton_Click" IsEnabled="False"/>
+                <TextBox x:Name="lowTextBox" HorizontalAlignment="Left" Height="23" Margin="239,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                <TextBox x:Name="highTextBox" HorizontalAlignment="Left" Height="23" Margin="239,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                <Button x:Name="displayButton" Content="Display" HorizontalAlignment="Left" Margin="364,115,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="displayButton_Click"/>
+                <TextBox x:Name="outputValuesTextBox" HorizontalAlignment="Left" Height="23" Margin="90,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="354"/>
+                <Label Content="Output of values between Low and High" HorizontalAlignment="Left" Margin="86,143,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+            </Grid>
+        </GroupBox>
+        <Grid HorizontalAlignment="Left" Height="100" Margin="10,40,0,0" VerticalAlignment="Top" Width="248">
+            <Button x:Name="calculateButton" Content="Calculate" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top" Width="75" Click="calculateButton_Click"/>
+            <Label Content="Get Factorial of:" HorizontalAlignment="Left" Margin="7,11,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="factorialTextBox" HorizontalAlignment="Left" Height="23" Margin="115,14,-1,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        </Grid>
+        <Label x:Name="factorialLabel" Content="" HorizontalAlignment="Left" Height="24" Margin="124,87,0,0" VerticalAlignment="Top" Width="120" FontWeight="Bold"/>
+        <Label x:Name="errorMessageLabel" Content="" HorizontalAlignment="Left" Height="28" Margin="10,257,0,0" VerticalAlignment="Top" Width="764" FontWeight="Bold" FontStyle="Italic" Foreground="#FFF3142C"/>
+    </Grid>
+</Window>
